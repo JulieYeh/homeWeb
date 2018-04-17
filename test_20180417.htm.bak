@@ -29,7 +29,7 @@ function cID(name) {
   gtag('config', 'UA-106549078-1', { //非第一次造訪者，啟動將資料傳送至GA的Gtag code
       'cookie_expires':63072000,
       'dimension2': TSB_ga_Cookie, //GA cookie 必傳，否則無法在行內DW識別客戶資料
-      'dimension4': '222' //nbuuid此處-照您原先定義填入
+      'dimension4': nbuuid //nbuuid此處-照您原先定義填入
       });
   var threhold = 1; //若非為第一次造訪，則threhold = 1
   }
@@ -37,7 +37,7 @@ function cID(name) {
   {
     gtag('config', 'UA-106549078-1', {
         'cookie_expires':63072000,
-        'dimension4': '333', //nbuuid此處-照您原先定義填入
+        'dimension4': nbuuid, //nbuuid此處-照您原先定義填入
         'send_page_view' : false //先暫停傳送資料至GA
         });
   }
